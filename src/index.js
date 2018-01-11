@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { render } from 'react-dom'
+import { HashRouter } from 'react-router-dom'
+import App from './containers/App'
 
-class A extends Component {
-    render(){
-        return(
-            <div></div>
-        )
-    }
-};
+render(
+    <HashRouter>
+        <App />
+    </HashRouter>,
+    document.getElementById('root')
+)
