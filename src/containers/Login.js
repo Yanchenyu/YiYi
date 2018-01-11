@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Login extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>this is login component</div>
-        )
+        );
     }
 }
 

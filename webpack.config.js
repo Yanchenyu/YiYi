@@ -31,7 +31,11 @@ module.exports = {
                     path.resolve(__dirname, 'node_modules'),
                     path.resolve(__dirname, 'dist')
                 ],
-                loader: 'babel-loader'
+                use: [{
+                        loader: 'babel-loader'
+                    },{
+                        loader: 'eslint-loader'
+                }]
             },
             {
                 test: /\.less$/,
