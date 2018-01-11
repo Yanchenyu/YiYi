@@ -1,0 +1,77 @@
+{
+  "name": "yiyi",
+  "version": "1.0.0",
+  "description": "just for yiyi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yanchenyu/YiYi.git"
+  },
+  "keywords": [
+    "yiyi"
+  ],
+  "author": "yanchenyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanchenyu/YiYi/issues"
+  },
+  "homepage": "https://github.com/Yanchenyu/YiYi#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "es6-promise": "^4.2.2",
+    "eslint": "^4.14.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "fetch-ie8": "^1.5.0",
+    "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "open-browser-webpack-plugin": "^0.0.5",
+    "postcss-loader": "^2.0.10",
+    "redux-devtools": "^3.4.0",
+    "style-loader": "^0.18.2"
+  },
+  "dependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "blueimp-md5": "^2.10.0",
+    "classnames": "^2.2.5",
+    "clean-webpack-plugin": "^0.1.17",
+    "events": "^1.1.1",
+    "file-loader": "^1.1.5",
+    "history": "^4.7.2",
+    "immutable": "^3.8.2",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "pkg-dir": "^2.0.0",
+    "pubsub-js": "^1.5.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^1.3.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
