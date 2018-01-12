@@ -1,0 +1,70 @@
+/**
+* @desc  颜色规范v1.0
+* @author  yan
+* @create  2018-01-12
+*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Flex 布局 */
+.flexrow, .flexrowCenter {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+  
+.flexwrap, .flexwrapCenter {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
+  
+.flexcolumn, .flexcolumnCenter {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+  
+// 附带水平和垂直居中设定
+.flexrow-center, .flexcolumnCenter, .flexwrapCenter {
+    justify-content: center;
+    align-items: center;
+}
+
+@themeColor: #25c0b1; // 主色 强调和突出的文字、icon
+@priceColor: #FE4C4C; // 辅色 重要突出的按钮、价格
+@ftColorBlack: #353535; // 重要文字、内容标题
+@ftColorBlack2: #666666; // 普通段落、用户名、详情、评论用户名
+@ftColorBlack3: #7e7b7b; // 辅助次要文字图标
+@ftColorGray: #CCCCCC;  // 无效时的颜色
+@pageColor: #EEEEEE; // 页面背景色
+@popColor: #f8f9f8; // 弹窗背景色
+@hintColor: #fea04c; // 提示性文字
+@splitColor: #e0dfdd; // 分隔线
+@placeholderColor: #a5a2a2; // 输入框提示
+@panelColor: white; // 文本面板背景
+@borderColor: #bfbfbf; // 设备控制圆形外圈颜色
+@defaultColor: black; // 默认颜色
+@uncheckedColor: #999999; // 未被选中的自提颜色
+/* 字体大小 */
+@ftSize1: 12px;
+@ftSize2: 14px;
+@ftSize3: 16px;
+@ftSize4: 18px;
+@ftSize5: 20px;
+@ftSize6: 22px;
+/* 参数定义 */
+@borderBottom: 0.7px solid @splitColor; // 底线
+
+
+
+
