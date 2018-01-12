@@ -41,42 +41,38 @@ module.exports = {
                 test: /\.less$/,
                 use: extractLess.extract({
                     use: [{
-                        loader: "css-loader"
+                        loader: "css-loader",
+                        options: {
+                            modules: true
+                        }
                     }, {
-                        loader: "less-loader"
+                        loader: "less-loader",
+                        options: {
+                            sourceMap: true
+                        }
                     }],
                     // use style-loader in development
                     fallback: "style-loader"
                 })
             },
             {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                  {
-                    loader: 'file-loader',
-                    options: {
-                        name (file) {
-                            if (env === 'development') {
-                                return '[path][name].[ext]'
-                            }
-                            return '[hash].[ext]'
-                        }
-                    }
-                  }
-                ]
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                  limit: 10000
+                }
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.less']    // Automatically resolve certain extensions
+        extensions: ['.js', '.jsx', '.less', '.jpg', '.jpeg', '.png']    // Automatically resolve certain extensions
     },
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
         port: 9000,
         hot: true,
-        inline: true,    // 内联模式
-        progress: true,
+        inline: true    // 内联模式
     },
     // externals: {
     //     jquery: 'jQuery',     // 可以使用import $ from 'jquery';
