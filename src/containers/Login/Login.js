@@ -13,16 +13,24 @@ class Login extends Component {
             num1: 0,
             num2: 1,
             imgShow: false,
-            corrected: true
+            corrected: true,
+            textInputShow: false,
+            loginBtnShow: false
         };
         this.handleClick = this.handleClick.bind(this);
     }
     componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                textInputShow: true,
+                loginBtnShow: true
+            });
+        }, 500);
         this.imgShowTimer = setInterval(() => {
             this.setState({
                 imgShow: !this.state.imgShow
             });
-        }, 4000);
+        }, 5000);
         this.imgUrlTimer = setInterval(() => {
             if (this.state.num1 === imgUrl.length - 2) {
                 this.setState({
@@ -32,7 +40,7 @@ class Login extends Component {
                     this.setState({
                         num2: 1
                     });
-                }, 4000);
+                }, 5000);
             } else {
                 this.setState({
                     num1: this.state.num1 + 2
@@ -41,9 +49,9 @@ class Login extends Component {
                     this.setState({
                         num2: this.state.num2 + 2
                     });
-                }, 4000);
+                }, 5000);
             }
-        }, 8000);
+        }, 10000);
     }
     componentWillUnmount() {
         clearInterval(this.imgShowTimer);
@@ -57,11 +65,11 @@ class Login extends Component {
             <div className={styles.loginBg}>
                 <img className={classnames({ [styles.loginBgImg]: true, [styles.imgShow]: !this.state.imgShow, [styles.imgHide]: this.state.imgShow })} src={imgUrl[this.state.num1]} />
                 <img className={classnames({ [styles.loginBgImg]: true, [styles.imgHide]: !this.state.imgShow, [styles.imgShow]: this.state.imgShow })} src={imgUrl[this.state.num2]} />
-                <div className={styles.textInput}>
-                    <input className={styles.flexrow} type="text" />
+                <div className={classnames({ [styles.textInput]: true, [styles.textInputShow]: this.state.textInputShow })}>
+                    <input className={styles.flexrow} type="text" placeholder="Who Are You" />
                 </div>
-                <div className={styles.loginBtn}>
-                    <button onClick={this.handleClick}>test</button>
+                <div className={classnames({ [styles.loginBtn]: true, [styles.loginBtnShow]: this.state.loginBtnShow })}>
+                    <button onClick={this.handleClick}>Sign In</button>
                 </div>
             </div>
         );
